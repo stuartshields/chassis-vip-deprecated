@@ -43,7 +43,7 @@ class vip::plugins (
 		location => '/vagrant/wp',
 		require  => [
 			Class['wp'],
-			vip::gitcheck[ $github_plugins ]
+			Vip::gitcheck[ $github_plugins ]
 		]
 	}
 
