@@ -6,6 +6,7 @@ class vip::plugins (
 		'monster-widget',
 		'user-switching',
 		'wordpress-importer',
+		'query-monitor',
 
 		# WordPress.com
 		'keyring',
