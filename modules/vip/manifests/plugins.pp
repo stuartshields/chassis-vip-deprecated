@@ -59,19 +59,25 @@ class vip::plugins (
 		}
 	}
 
+	if ! ( File['/vagrant/content/themes/vip'] ) {
+		file { "/vagrant/content/themes/vip":
+			ensure => "directory",
+		}
+	}
+
 	exec { "vip-install":
-		command => "git clone https://github.com/svn2github/wordpress-vip-plugins.git /vagrant/content/themes/vip",
+		command => "git clone https://github.com/svn2github/wordpress-vip-plugins.git /vagrant/content/themes/vip/plugins",
    		path	=> '/usr/bin/',
 		require => Package[ 'git-core' ],
-		onlyif  => "test ! -d /vagrant/content/themes/vip",
+		onlyif  => "test ! -d /vagrant/content/themes/vip/plugins",
 		timeout => 0
 	}
 
 	exec { "vip-update":
-		command => "git --work-tree=/vagrant/content/themes/vip --git-dir=/vagrant/content/themes/vip/.git pull origin master",
+		command => "git --work-tree=/vagrant/content/themes/vip --git-dir=/vagrant/content/themes/vip/plugins/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
-		onlyif  => "test -d /vagrant/content/themes/vip",
+		onlyif  => "test -d /vagrant/content/themes/vip/plugins",
 		timeout => 0
 	}
 }
