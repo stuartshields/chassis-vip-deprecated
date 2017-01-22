@@ -74,7 +74,7 @@ class vip::plugins (
 	}
 
 	exec { "vip-update":
-		command => "git --work-tree=/vagrant/content/themes/vip --git-dir=/vagrant/content/themes/vip/plugins/.git pull origin master",
+		command => "git --work-tree=/vagrant/content/themes/vip/plugins --git-dir=/vagrant/content/themes/vip/plugins/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
 		onlyif  => "test -d /vagrant/content/themes/vip/plugins",
