@@ -38,13 +38,9 @@ class vip::plugins (
 
 	# Install plugins
 	wp::plugin { $plugins:
-		ensure   => enabled,
-		networkwide => true,
 		location => '/vagrant/wp',
-		require  => [
-			Class['wp'],
-			Vip::gitcheck[ $github_plugins ]
-		]
+		networkwide => true,
+		require  => Class['wp']
 	}
 
 	# Update all the plugins
