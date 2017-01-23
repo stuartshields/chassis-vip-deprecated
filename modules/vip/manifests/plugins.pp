@@ -39,7 +39,6 @@ class vip::plugins (
 	# Install plugins
 	wp::plugin { $plugins:
 		location => '/vagrant/wp',
-		networkwide => true,
 		require  => Class['wp']
 	}
 
