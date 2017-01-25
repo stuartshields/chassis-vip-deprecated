@@ -2,6 +2,11 @@ class vip (
 	$php = $vip_config[php],
 	$path	= "/vagrant/extensions/vip",
 ) {
+  if ! ( File['/vagrant/content22'] ) {
+    file { "/vagrant/content22":
+      ensure => "directory",
+    }
+  }
 	file { "${$path}/local-config.php":
 		content => template('vip/local-config.php.erb'),
 		owner   => 'root',
@@ -16,8 +21,8 @@ class vip (
 		mode    => 0644,
 	}
 
-	if ! ( File['${$path}/config'] ) {
-		file { "${$php}/config":
+	if ! ( File["${$path}/config"] ) {
+		file { "${$path}/config":
 			ensure => "directory",
 			owner   => 'root',
 			group   => 'root',
