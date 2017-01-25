@@ -86,7 +86,7 @@ class vip::plugins (
 	}
 
 	exec { "mu-plugins-update":
-		command => "git --work-tree=/vagrant/content/themes/vip/mu-plugins --git-dir=/vagrant/content/mu-plugins/.git pull origin master",
+		command => "git --work-tree=/vagrant/content/mu-plugins --git-dir=/vagrant/content/mu-plugins/.git pull origin master",
 		path	=> [ '/usr/bin/', '/bin' ],
 		require => [ Package[ 'git-core' ] ],
 		onlyif  => "test -d /vagrant/content/mu-plugins",
