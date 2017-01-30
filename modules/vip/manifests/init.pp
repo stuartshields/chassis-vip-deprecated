@@ -9,13 +9,6 @@ class vip (
 		mode    => 0644,
 	}
 
-	file { "/vagrant/content/config.yaml":
-		content => template('vip/config.yaml.erb'),
-		owner   => 'root',
-		group   => 'root',
-		mode    => 0644,
-	}
-
 	file { "/vagrant/content/config":
 		ensure => "directory",
 		owner   => 'root',
