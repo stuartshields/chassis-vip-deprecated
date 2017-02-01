@@ -50,11 +50,4 @@ class vip (
 		group   => 'root',
 		mode    => 0644,
 	}
-
-	file { "/vagrant/content/object-cache.php":
-		content => template('vip/object-cache.php.erb'),
-		owner   => 'root',
-		group   => 'root',
-		mode    => 0644,
-	}
 }
