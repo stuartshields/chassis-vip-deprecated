@@ -49,12 +49,6 @@ class vip::plugins (
 		require  => Wp::Site['/vagrant/wp'],
 	}
 
-	if ! ( File['/vagrant/content/themes'] ) {
-		file { "/vagrant/content/themes":
-			ensure => "directory",
-		}
-	}
-
 	if ! ( File['/vagrant/content/themes/vip'] ) {
 		file { "/vagrant/content/themes/vip":
 			ensure => "directory",
