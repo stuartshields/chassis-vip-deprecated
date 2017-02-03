@@ -17,7 +17,7 @@ define( 'WP_CACHE', true );
 
 // Fixes an error with HTTP_HOST returning errors in wp cli -
 if ( ! isset( $_SERVER['HTTP_HOST'] ) && defined( 'WP_CLI' ) && WP_CLI ) {
-	$_SERVER['HTTP_HOST'] = 'wp.wsu.edu';
+	$_SERVER['HTTP_HOST'] = 'vip.local';
 }
 
 defined('WP_CONTENT_DIR') or define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
