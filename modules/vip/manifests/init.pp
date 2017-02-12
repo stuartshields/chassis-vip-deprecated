@@ -37,13 +37,6 @@ class vip (
 		mode    => 0644,
 	}
 
-	file { "/vagrant/content/config/is-mobile.php":
-		content => template('vip/is-mobile.php.erb'),
-		owner   => 'www-data',
-		group   => 'www-data',
-		mode    => 0644,
-	}
-
 	file { "/vagrant/content/advanced-cache.php":
 		content => template('vip/advanced-cache.php.erb'),
 		owner   => 'www-data',
