@@ -7,8 +7,9 @@ We only support PHP 7+ due to WP.com websites being upgraded to PHP 7 recently.
 
 ## Installing & Documentation
 
-1. Clone chassis `chassis` by `git clone --recursive https://github.com/Chassis/Chassis chassis`
-2. Clone `config.yaml` into the content folder - `git clone https://github.com/stuartshields/vip-config.git chassis/content`
+1. Clone `chassis` i.e: `git clone --recursive https://github.com/Chassis/Chassis chassis`
+2. CD into the directory `cd chassis`
+2. Clone `config.yaml` into the content folder i.e: `git clone https://github.com/stuartshields/vip-config.git content`
 3. Add `10.86.73.80 vip.local` to your `hosts` file and any additional domains you need, use the same IP Address
 4. `vagrant up`
 5. `git clone git@github.com:stuartshields/chassis-vip.git extensions/vip`
