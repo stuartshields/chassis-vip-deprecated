@@ -12,11 +12,11 @@ class vip::plugins (
 		'keyring',
 		'mrss',
 		'polldaddy',
+		'jetpack',
 	],
 
 	$github_plugins = [
 		'amp-wp',
-		'jetpack',
 		'media-explorer',
 		# 'vip-scanner', // We need to find a way to do submodule init - vendor/PHP-Parser
 		'writing-helper',
