@@ -19,7 +19,7 @@ define( 'WP_CACHE', false );
 if ( ! isset( $_SERVER['HTTP_HOST'] ) && defined( 'WP_CLI' ) && WP_CLI ) {
 	$_SERVER['HTTP_HOST'] = 'vip.local';
 }
-define('COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
+define( 'COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 
 defined('WP_CONTENT_DIR') or define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
 defined('WP_CONTENT_URL') or define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
