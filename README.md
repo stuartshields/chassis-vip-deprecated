@@ -1,4 +1,7 @@
-# VIP
+# CLASSIC VIP
+
+VIP QUICKSTART is no longer being maintained by Automattic. Please use [chassis-vip](https://github.com/stuartshields/chassis-vip) for the new setup.
+
 Adds VIP support to Chassis.
 
 This is based on [vip-quickstart](https://github.com/Automattic/vip-quickstart) by Automattic.
